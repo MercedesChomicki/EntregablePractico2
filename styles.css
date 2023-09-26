@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+
+body{
+    --white: #FCF5FD;
+    --black: #161616;
+    --primary: #C417E8;
+    --secondary: #2574E8;
+    --accent: #FF7013;
+    --font-h1: 'Montserrat', sans-serif;
+    --font-h2-h3-body-smallText: 'Lato', sans-serif;
+    --font-button: 'Open Sans', sans-serif;
+    --size-h1: 48px;
+    --size-h2: 40px;
+    --size-h3: 20px;
+    --size-body: 16px;
+    --size-button: 14px;
+    --size-smallText: 12px;
+}
+
+nav{
+    background-color: var(--black);
+    height: 80px;
+}
+
+.logo{
+    height: 80px;
+    width: auto;
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+    width: 15%;
+}
+
+.dropdown-menu{
+    /* all: unset; Elimina todas las propiedades preestablecidas del button */
+    background-color: var(--black);
+    width: 100%;
+}
+
+.dropdown-content{
+    list-style: none;
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--black);
+}
+
+.dropdown-content-p{
+    color: var(--white);
+    font-family: var(--h3);
+}
+
+.icono {
+    width: 24px;
+    height: 24px;
+}

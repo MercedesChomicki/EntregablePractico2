@@ -3,57 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Home</title>
 </head>
 <body>
-    <nav>
-        <!-- menu hambuguesa -->
-        <img src="./images/logo.png" alt="Logo">
-        <!-- avatar -->
-    </nav>
+    <!-- ¿Es necesario el div? -->
     <div>
-        <h3>Acción</h3>
-        <h3>Cartas</h3>
-        <h3>Carreras</h3>
-        <h3>Clásicos</h3>
-        <h3>Deportes</h3>
-        <h3>Educativos</h3>
-        <h3>Estrategia</h3>
-        <h3>Memoria</h3>
-    </div>
-    <footer>
-        <div>
+        <nav>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 8h12M6 12h12M6 16h12"/></svg>
             <img src="./images/logo.png" alt="Logo">
-        </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="none" d="M8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0ZM20.5 12.5A4.5 4.5 0 1 1 16 8a4.5 4.5 0 0 1 4.5 4.5Z"/><path fill="currentColor" d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24ZM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8ZM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0Z"/></svg>
+        </nav>
         <div>
             <div>
-                <p>¡Tenemos cientos de juegos online para niños con los que podrás jugar con tus personajes favoritos en cualquier momento!</p>
-                <p>Descubre aquí todos los juegos de aventuras, rompecabezas, acción, habilidad y deportes que tenemos para ti, juegos de cartas para chicos y chicas.</p>
-                <p>Con tantos juegos siempre tendrás con qué divertirte y a alguien con quien jugar.</p>
-                <p>Tenemos juegos para todos los gustos, así que invita a tus amigos y diviértete con ellos.</p>    
+                <h3>¡Descubre la diversión sin límites! Juega los mejores juegos gratuitos en nuestra Página Web</h3>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="./images/DESTACADOS/images.jpg" class="d-block w-100" alt="Imagen 1 destacados">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="./images/DESTACADOS/nota_nuevos-juegos-online-en-html5.jpg" class="d-block w-100" alt="Imagen 2 destacados">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="./images/DESTACADOS/juego-online-bananas-pijama.jpg" class="d-block w-100" alt="Imagen 3 destacados">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+           
+            <div>
+                <h3>Acción</h3>
+                <div>
+                    <div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./images/ACCION/Extinction.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h3>Cartas</h3>
+            <h3>Carreras</h3>
+            <h3>Clásicos</h3>
+            <h3>Deportes</h3>
+            <h3>Educativos</h3>
+            <h3>Estrategia</h3>
+            <h3>Memoria</h3>
+        </div>
+        <footer>
+            <div>
+                <img src="./images/logo.png" alt="Logo">
             </div>
             <div>
-                <h3>Información</h3>
-                <a href="">Nuestra Historia</a>
-                <a href="">Categorías de juegos</a>
-                <a href="">Preguntas frecuentes</a>
-                <a href="">Términos de pago</a>
+                <div>
+                    <p>¡Tenemos cientos de juegos online para que juegues con tus personajes favoritos en cualquier momento!</p>
+                    <p>Invita a tus amigos y diviértete con ellos.</p>    
+                </div>
+                <div>
+                    <h3>Información</h3>
+                    <a href="">Nuestra Historia</a>
+                    <a href="">Categorías de juegos</a>
+                    <a href="">Preguntas frecuentes</a>
+                    <a href="">Términos de pago</a>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <a href="">Desarrolladores</a>
+                    <p>Síguenos a través de nuestras redes:</p>
+                    <a href="https://twitter.com/home?lang=es">twitter/juegos.com</a>
+                    <a href="https://www.facebook.com/?locale=es_LA">facebook/juegos.com</a>
+                </div>
             </div>
             <div>
-                <h3>Contacto</h3>
-                <a href="">Desarrolladores</a>
-                <p>Síguenos a través de nuestras redes:</p>
-                <a href="https://twitter.com/home?lang=es">twitter/juegos.com</a>
-                <a href="https://www.facebook.com/?locale=es_LA">facebook/juegos.com</a>
+                <a href="">Terminos y Condiciones</a>
+                <a href="">Politica de privacidad</a>
+                <a href="">Seguridad</a>
+                <a href="">Ley de Cookies</a>
+                <a href="">Aviso legal</a>
             </div>
-        </div>
-        <div>
-            <a href="">Terminos y Condiciones</a>
-            <a href="">Politica de privacidad</a>
-            <a href="">Seguridad</a>
-            <a href="">Ley de Cookies</a>
-            <a href="">Aviso legal</a>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
