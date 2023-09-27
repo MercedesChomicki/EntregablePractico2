@@ -11,21 +11,52 @@ body{
     --font-h1: 'Montserrat', sans-serif;
     --font-h2-h3-body-smallText: 'Lato', sans-serif;
     --font-button: 'Open Sans', sans-serif;
-    --size-h1: 48px;
-    --size-h2: 40px;
-    --size-h3: 20px;
-    --size-body: 16px;
-    --size-button: 14px;
     --size-smallText: 12px;
 }
+
+h1{
+    font-family: var(--font-h1);
+    font-size: 48px;
+}
+h2, h3, body, footer{
+    font-family: var(--font-h2-h3-body-smallText);
+}
+button{
+    font-family: var(--font-button);
+    font-size: 14px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+body{
+    font-size: 16px;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+/* .small-text{
+    font-size: 12px;
+} */
 
 nav{
     background-color: var(--black);
     height: 80px;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    justify-items: center;
+    align-items: center;
 }
 
 .logo{
-    height: 80px;
+    height: 60px;
     width: auto;
 }
 
@@ -36,19 +67,29 @@ nav{
 }
 
 .dropdown-menu{
-    /* all: unset; Elimina todas las propiedades preestablecidas del button */
+    /*all: unset; Elimina todas las propiedades preestablecidas del button */
     background-color: var(--black);
     width: 100%;
+    border: 0; 
 }
 
 .dropdown-content{
     list-style: none;
-    /* display: none; */
+    display: none;
     position: absolute;
     width: 100%;
     overflow: auto;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     background-color: var(--black);
+}
+
+.dropdown-content-li{
+    padding-left: 0;
+}
+
+.dropdown-content-li a{
+    display: flex;
+    justify-content:left;
 }
 
 .dropdown-content-p{
@@ -59,4 +100,41 @@ nav{
 .icono {
     width: 24px;
     height: 24px;
+}
+
+
+
+
+/* FOOTER */
+.footer-content{
+    background-color: var(--black);
+    color: var(--white);
+    height: 380px;
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    align-items: center;
+    padding: 15px;
+}
+.footer-content-info{
+   display: grid;
+   grid-template-columns: 48% 16% 16% 16%;
+   column-gap: 14px;
+}
+
+.footer-content-info-columns{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-content-info div a{
+    color: var(--white);
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 15px;
+    font-size: var(--size-smallText);
 }
