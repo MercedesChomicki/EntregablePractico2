@@ -11,6 +11,8 @@ body{
     --secondary-l1: #679CEA;
     --secondary-l2: #8EB8F7;
     --accent: #FF7013;
+    --reject: #EC0000;
+    --green: #00AA25;
     --font-h1: 'Montserrat', sans-serif;
     --font-h2-h3-body-smallText: 'Lato', sans-serif;
     --font-button: 'Open Sans', sans-serif;
@@ -59,9 +61,14 @@ input{
     border-radius: 8px;
     width: 364px;
     height: 39px;
-    margin: 3px auto 23px auto;
+    margin: 3px auto 15px auto;
     border: none;
-    box-shadow: var(--box-shadow)
+    box-shadow: var(--box-shadow);
+}
+
+input:focus{
+    box-shadow: inset 0 0 0 4px var(--secondary-l1);
+    outline: none;
 }
 
 hr{
@@ -145,21 +152,27 @@ nav{
 .body-landing-page{
     background-image: url(images/fondo1.jpg);
     background-repeat: repeat;
-    
+}
+
+/* INTERMEDIATE SCREEN */
+.intermediateScreen{
+    width: 100%;
+    height: auto;
+    background-color: rgba(22, 22, 22, 0.54);
     display: flex;
     justify-content: center;
 }
 
-/* FORM LOG IN */
-
-.form-login{
+/* FORMS */
+.form-container{
     background-color: var(--primary-s1);
+    color: var(--white);
     width: 486px;
-    height: 680px;
     margin: 134px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
 }
 
 .form{
@@ -167,18 +180,23 @@ nav{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 600px;
-    color: var(--white);
-    
 }
-/* 
-.form-title{
-    
-} */
+
+.form p{
+    margin: 0 auto;
+}
+
+.form p a{
+    color: var(--secondary-l2);
+}
 
 .form-inputs{
     display: flex;
     flex-direction: column;
+}
+
+.btn-submit, .form-inputs p a:hover{
+    cursor: pointer;
 }
 
 .btn-submit{
@@ -192,16 +210,63 @@ nav{
     background-color: var(--secondary-l1);
 }
 
-.form-inputs p{
-    margin: 0 auto;
+.form-input-error{
+    font-family: var(--font-h2-h3-body-smallText);
+    font-size: var(--size-smallText);
+    color: var(--reject);
+    background-color: var(--white);
+    display: none;
 }
 
-.form-inputs p a{
-    color: var(--secondary-l2);
+.form-input-error-active{
+    display: block;
 }
 
-.btn-submit, .form-inputs p a:hover{
-    cursor: pointer;
+.form-group-input{
+    position: relative;
+}
+
+.form-validation-state{
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    z-index: 100;
+    font-size: 20px;
+    opacity: 1;
+}
+ 
+.form-group-correct .form-validation-state{
+    color: var(--green);
+    opacity: 1;
+}
+
+.form-group-incorrect .form-validation-state{
+    color: var(--reject);
+    opacity: 1;
+} 
+
+.form-group-incorrect .form-input{
+    box-shadow: inset 0 0 0 4px var(--reject);
+    outline: none;
+}
+
+.success-msg{
+    font-size: var(--size-smallText);
+    color: var(--green);
+    display: none;
+}
+
+.success-msg-active{
+    display: block;
+}
+
+/* FORM LOG IN */
+.form-container-login{
+    height: 680px;
+}
+
+.form-login{
+    height: 600px;
 }
 
 .form-networks{
@@ -220,9 +285,26 @@ nav{
 }
 
 /* FORM REGISTATION */
-.form-registration{
+.form-container-signUp{
+    height: 830px;
     display: none;
 }
+
+.form-signUp{
+    height: 800px;
+}
+
+.img-captcha{
+    width: 368px;
+    height: 86.1px;
+    border-radius: 8px;
+    margin: 16px 0 30px 0;
+}
+
+/* INPUT -> REQUIRED
+input:focus:required:invalid{
+    border: 5px solid var(--reject);
+} */
 
 /* BODY HOME*/
 .container{
