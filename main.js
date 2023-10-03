@@ -13,11 +13,11 @@ document.getElementById("logIn").addEventListener('click', (e)=>{
 });
 
 // Validations
-const form = document.getElementById("form");
-const inputs = document.querySelectorAll("#form input");
+const form = document.querySelector(".form");
+const inputs = document.querySelectorAll(".form input");
 
 const expressions = {
-    password: /^.{4,12}$/ // 4 a 12 digitos.
+    password: /^.{4,12}$/ // 4 a 12 digitos.------------- FALTA CONTROLAR QUE TENGA MAYUSCULA, MIN, Y SIGNO
 }
 
 const fields = {
@@ -28,7 +28,7 @@ const validateForm = (e)=>{
     switch(e.target.name){
         case "password":
             validateField(expressions.password, e.target, 'password');
-			validatePassword2();
+			// validatePassword2();
         break;
         case "password2":
             validatePassword2();
@@ -44,6 +44,7 @@ const validateField = (expression, input, field) => {
         document.querySelector(`#${field}-group i`).classList.add('fa-check-circle');
 		document.querySelector(`#${field}-group i`).classList.remove('fa-solid');
         document.querySelector(`#${field}-group i`).classList.remove('fa-circle-exclamation');
+        document.querySelector(`#${field}-group`).classList.remove('form-group-error');
 		document.querySelector(`#${field}-group .form-input-error`).classList.remove('form-input-error-active');
 		fields[field] = true;
 	} else {
@@ -53,6 +54,7 @@ const validateField = (expression, input, field) => {
         document.querySelector(`#${field}-group i`).classList.add('fa-circle-exclamation');
 		document.querySelector(`#${field}-group i`).classList.remove('fas');
         document.querySelector(`#${field}-group i`).classList.remove('fa-check-circle');
+        document.querySelector(`#${field}-group`).classList.add('form-group-error');
 		document.querySelector(`#${field}-group .form-input-error`).classList.add('form-input-error-active');
 		fields[field] = false;
 	}

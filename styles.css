@@ -210,12 +210,61 @@ nav{
     background-color: var(--secondary-l1);
 }
 
+.form-group{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-error{
+    margin-bottom: 25px;
+}
+
 .form-input-error{
+    position: absolute;
+    bottom: -18px;
     font-family: var(--font-h2-h3-body-smallText);
     font-size: var(--size-smallText);
-    color: var(--reject);
-    background-color: var(--white);
+    color: var(--white);
+    background: rgb(196,23,232);
+    background: linear-gradient(50deg, rgba(196,23,232,0.8799894957983193) 0%, rgba(236,0,0,0.773546918767507) 9%, rgba(236,0,0,0.9360119047619048) 26%, rgba(236,0,0,1) 100%);
+    border-radius: 8px;
+    width: 330px;
+    height: auto;
+    padding: 4px 10px;
+    z-index: 1;
+    box-shadow: var(--box-shadow);
     display: none;
+}
+
+.form-input-error::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 22px;
+    background-color: var(--reject);
+    border-top-left-radius: 100px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: -6;
+}
+
+.form-input-error::after{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 8px;
+    background-color: var(--white);
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    top: -8px;
+    right: 3px;
+    z-index: -6;
+}
+
+.form-input-error2{
+    bottom: -3px;
 }
 
 .form-input-error-active{
