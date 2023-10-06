@@ -152,30 +152,14 @@
             <div class="container-carrousel">
                 <div>
                     <h3>Acción</h3>
-                    <!-- <div>
-                        <div>
-                            <div class="card" style="width: 18rem;">
-                                <img src="./images/ACCION/Extinction.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div> -->
                 </div>
                 <div class="carrousel">
                     <h3>Cartas</h3>
-                    <div class="carrousel-cards">
+                    <div class="carrousel-cards carrousel-list" id="carrousel-cards">
+                        <div class="carrousel-arrow carrousel-prev" id="btn-prev">
+                            <i class="fa-solid fa-circle-chevron-left fa-2xl"></i>
+                        </div>
+                        <div class="carrousel-track" id="track">
                             <div class="card">
                                 <div class="card-img">
                                     <div class="card-hover">
@@ -187,83 +171,87 @@
                                 </div>
                                 <button class="btn btn-jugar">Jugar</button>
                             </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <div class="card-hover">
-                                    <h3>Solitario</h3>
-                                    <hr class="card-hr">
-                                    <p>Es un juego de cartas en el que el objetivo es apilar las cartas de la baraja en orden ascendente o descendente. ¡Asegúrate de seguir siempre con el color opuesto y diviértete!</p>
+                            <div class="card">
+                                <div class="card-img">
+                                    <div class="card-hover">
+                                        <h3>Solitario</h3>
+                                        <hr class="card-hr">
+                                        <p>Es un juego de cartas en el que el objetivo es apilar las cartas de la baraja en orden ascendente o descendente. ¡Asegúrate de seguir siempre con el color opuesto y diviértete!</p>
+                                    </div>
+                                    <img src="images/CARTAS/Solitario.jpg" alt="Solitario" class="img">
                                 </div>
-                                <img src="images/CARTAS/Solitario.jpg" alt="Solitario" class="img">
+                                <button class="btn btn-jugar">Jugar</button>
                             </div>
-                            <button class="btn btn-jugar">Jugar</button>
+                            <div class="card">
+                                <div class="card-img">
+                                    <div class="card-hover">
+                                        <h3>Spider</h3>
+                                        <hr class="card-hr">
+                                        <p>Para empezar a jugar, hay que saber que consta de 104 cartas y consiste en apilar las de menor valor sobre las más grandes. Las filas se forman con cartas del mismo palo y deben estar repartidas en 19 columnas y habrá algunas dadas vueltas que se irán descubriendo a medida que progrese el juego.</p>
+                                    </div>
+                                    <img src="images/CARTAS/spider.jpg" alt="Spider" class="img">
+                                </div>
+                                <button class="btn btn-agregar">
+                                    <div class="btn-agregar-icono">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                    <span>Agregar</span>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <div class="card-hover">
+                                        <h3>Uno</h3>
+                                        <hr class="card-hr">
+                                        <p>Se reparten 7 cartas a cada jugador y ganará la ronda el primero que consiga deshacerse de todas antes que el resto. Estas cartas están numeradas del 1 al 9 y son de 4 colores diferentes.</p>
+                                    </div>
+                                    <img src="images/CARTAS/Uno.jpg" alt="Uno" class="img">
+                                </div>
+                                <button class="btn btn-agregado">Agregado</button>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <div class="card-hover">
+                                        <h3>Monopoly</h3>
+                                        <hr class="card-hr">
+                                        <p>El objetivo del juego es formar un monopolio de oferta, poseyendo todas las propiedades inmuebles que aparecen en el juego.</p>
+                                    </div>
+                                    <img src="images/CARTAS/Monopoly.jpg" alt="Monopoly" class="img">
+                                </div>
+                                <button class="btn btn-jugar">Jugar</button>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <div class="card-hover">
+                                        <h3>Truco</h3>
+                                        <hr class="card-hr">
+                                        <p>Para ganar se deben sumar una cantidad determinada de puntos, a veces se dividen en etapas.</p>
+                                    </div>
+                                    <img src="images/CARTAS/Truco.jpg" alt="Truco" class="img">
+                                </div>
+                                <button class="btn btn-jugar">Jugar</button>
+                            </div>
+                            <div class="card">
+                                <div class="card-img">
+                                    <div class="card-hover">
+                                        <h3>Poker</h3>
+                                        <hr class="card-hr">
+                                        <p>Es un juego de apuestas en el que los jugadores, con todas o parte de sus cartas ocultas, hacen apuestas sobre una puja inicial, recayendo la suma total de las apuestas en el jugador o jugadores con la mejor combinación de cartas</p>
+                                    </div>
+                                    <img src="images/CARTAS/Poker.jpg" alt="Poker" class="img">
+                                </div>
+                                <button class="btn btn-agregar">
+                                    <div class="btn-agregar-icono">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                    <span>Agregar</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <div class="card-hover">
-                                    <h3>Spider</h3>
-                                    <hr class="card-hr">
-                                    <p>Para empezar a jugar, hay que saber que consta de 104 cartas y consiste en apilar las de menor valor sobre las más grandes. Las filas se forman con cartas del mismo palo y deben estar repartidas en 19 columnas y habrá algunas dadas vueltas que se irán descubriendo a medida que progrese el juego.</p>
-                                </div>
-                                <img src="images/CARTAS/spider.jpg" alt="Spider" class="img">
-                            </div>
-                            <button class="btn btn-agregar">
-                                <div class="btn-agregar-icono">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </div>
-                                <span>Agregar</span>
-                            </button>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <div class="card-hover">
-                                    <h3>Uno</h3>
-                                    <hr class="card-hr">
-                                    <p>Se reparten 7 cartas a cada jugador y ganará la ronda el primero que consiga deshacerse de todas antes que el resto. Estas cartas están numeradas del 1 al 9 y son de 4 colores diferentes.</p>
-                                </div>
-                                <img src="images/CARTAS/Uno.jpg" alt="Uno" class="img">
-                            </div>
-                            <button class="btn btn-agregado">Agregado</button>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <div class="card-hover">
-                                    <h3>Monopoly</h3>
-                                    <hr class="card-hr">
-                                    <p>El objetivo del juego es formar un monopolio de oferta, poseyendo todas las propiedades inmuebles que aparecen en el juego.</p>
-                                </div>
-                                <img src="images/CARTAS/Monopoly.jpg" alt="Monopoly" class="img">
-                            </div>
-                            <button class="btn btn-jugar">Jugar</button>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <div class="card-hover">
-                                    <h3>Truco</h3>
-                                    <hr class="card-hr">
-                                    <p>Para ganar se deben sumar una cantidad determinada de puntos, a veces se dividen en etapas.</p>
-                                </div>
-                                <img src="images/CARTAS/Truco.jpg" alt="Truco" class="img">
-                            </div>
-                            <button class="btn btn-jugar">Jugar</button>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <div class="card-hover">
-                                    <h3>Poker</h3>
-                                    <hr class="card-hr">
-                                    <p>Es un juego de apuestas en el que los jugadores, con todas o parte de sus cartas ocultas, hacen apuestas sobre una puja inicial, recayendo la suma total de las apuestas en el jugador o jugadores con la mejor combinación de cartas</p>
-                                </div>
-                                <img src="images/CARTAS/Poker.jpg" alt="Poker" class="img">
-                            </div>
-                            <button class="btn btn-agregar">
-                                <div class="btn-agregar-icono">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </div>
-                                <span>Agregar</span>
-                            </button>
+                        <div class="carrousel-arrow carrousel-next" id="btn-next">
+                            <i class="fa-solid fa-circle-chevron-right fa-2xl"></i>
                         </div>
                     </div>
                 </div>
@@ -336,7 +324,6 @@
             </div>
         </footer>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="main.js"></script>

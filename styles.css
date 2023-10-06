@@ -439,18 +439,71 @@ input:focus:required:invalid{
     width: auto;
 } */
 
+/* CARROUSELS */
+
+.carrousel{
+    width: 100%;
+    margin: 0;
+}
+
+.carrousel-cards{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+.carrousel-track{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transition: .5s ease-in-out;
+}
+
+.carrousel-arrow{
+    position: absolute;
+    z-index: 50;
+    top: 60px;
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+    scale: 1.1 1.1;
+    transition: .1s scale;
+}
+
+.carrousel-arrow:hover{
+    scale: 1.3 1.3;
+}
+
+.carrousel-prev{
+    left: 25px;
+}
+
+.carrousel-next{
+    right: 25px;
+}
+
+.container-carrousel{
+    margin-left: 25px;
+}
+
 /* CARDS */
 .card{
     position: relative;
     width: 200px;
     height: 142px;
+    /* padding: 0 18px; */
+    /* box-sizing: border-box; */
     transition: box-shadow .1s, transform;
 }
 
 .card:hover{
     box-shadow: 0 0 500 rgb(0, 0, 0, 1);
     position: relative;
-    z-index: 65;
+    /* z-index: 65; */
+    z-index: 25;
 }
 
 .card .card-img{
@@ -465,11 +518,11 @@ input:focus:required:invalid{
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0px 0px;
-    /* transition: .1s, transform; */
 }
 
 .card-hover{
-    z-index: 50;
+    /* z-index: 50; */
+    z-index: 10;
     position: absolute;
     background-color: rgba(22, 22, 22, 0.75);
     border-radius: 8px 8px 0px 0px;
@@ -496,20 +549,17 @@ input:focus:required:invalid{
     height: 29px;
     border-radius: 0px 0px 8px 8px;
     box-shadow: var(--box-shadow);
-    z-index: 60;
+    z-index: 20;
     position: absolute;
     bottom: 0;
 }
 
 .btn-jugar{
     background-color: var(--green);
-    /* transition: 1s scale; */
 }
 
 .btn-jugar:hover{
-    /* border-radius: var(--border-radius); */
     background: var(--green-l1);
-    /* scale: 1.03 1.03; */
 }
 
 .btn-agregar{
@@ -558,21 +608,6 @@ input:focus:required:invalid{
 
 .btn-agregado:hover{
     background-color: var(--accent-l1);
-}
-
-/* CARROUSELS */
-
-.carrousel-cards{
-    display: flex;
-    gap: 90px;
-}
-
-/* .carrousel{
-
-} */
-
-.container-carrousel{
-    margin-left: 25px;
 }
 
 /* JUEGO */
@@ -940,4 +975,18 @@ aside div img{
     align-items: center;
     padding-right: 15px;
     font-size: var(--size-smallText);
+}
+
+
+@media(min-width:760px) {
+
+    /* .carrousel{
+        margin: 0 60px;
+        width: 275px;
+    } */
+
+    /* .carrousel .card-img{
+        width: 250px;
+    } */
+
 }

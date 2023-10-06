@@ -54,6 +54,38 @@ images.forEach((img)=>{
     })
 })
 
+// CARROUSEL CARDS
+// function App(){}
+
+//     window.onload = function(e){
+//         let app = new App();
+//         window.app = app; 
+//     }
+
+//     App.prototype.processingButton = function(e) {
+//         const btn = e.currentTarget.parentNode;
+//         const track = e.currentTarget.parentNode.getElementById('track');
+//         const card = track.querySelectorAll('.card');
+//         const cardWidth = card(0).offsetWidth;
+//         const trackWidth = track.offsetWidth;
+//         const listWidth = carrouselList.offsetWidth;
+//         track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0, -2) * -1);
+//         btn.dataset.button == "btn-prev" ? prevAction(leftPosition, cardWidth, track) : nextAction(leftPosition, trackWidth, listWidth, cardWidth, track)
+//     }
+
+//     let prevAction = (leftPosition, cardWidth, track) => {
+//         if(leftPosition > 0){
+//             track.style.left = `${-1 * (leftPosition - cardWidth)}px`;
+//         }
+//     }
+
+//     let nextAction = (leftPosition, trackWidth, listWidth, cardWidth, track) => {
+//         if(leftPosition < (trackWidth - listWidth)){
+//             track.style.left = `${-1 * (leftPosition + cardWidth)}px`;
+//         }
+//     }
+
+
 // Carrousel de destacados - Home
 
 let swiper = new Swiper(".mySwiper", {
