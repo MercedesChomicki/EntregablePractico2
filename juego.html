@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <title>Juego</title>
 </head>
@@ -77,56 +78,141 @@
                 </ol>
             </div>
             <img src="./images/logo.png" alt="Logo" class="logo">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--white)" d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M1 2v2h2l3.6 7.59l-1.36 2.45c-.15.28-.24.61-.24.96a2 2 0 0 0 2 2h12v-2H7.42a.25.25 0 0 1-.25-.25c0-.05.01-.09.03-.12L8.1 13h7.45c.75 0 1.41-.42 1.75-1.03l3.58-6.47c.07-.16.12-.33.12-.5a1 1 0 0 0-1-1H5.21l-.94-2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2Z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="var(--white)" d="M8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0ZM20.5 12.5A4.5 4.5 0 1 1 16 8a4.5 4.5 0 0 1 4.5 4.5Z"/><path fill="currentColor" d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24ZM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8ZM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0Z"/></svg>
+            <div class="avatar">
+                <img src="images/AVATARS/avatar1.png" alt="Avatar usuario">
             </div>
         </nav>
 
-        <div>
+        <div class="container">
             <!-- breadcrums -->
-            <!-- espacio de juego -->
-            <!-- instrucciones de juego -->
-            <div>
-                <h2>4 en linea: Burro vs Gato - Shrek</h2>
-                <p>Las normas del cuatro en línea son muy sencillas. Se juega siempre entre 2 jugadores y sobre un tablero de 7x6 casillas. En cada turno cada jugador coloca una ficha de su personaje en una columna y esta cae hasta la primera casilla disponible. El que consigue ubicar 4 fichas del mismo personaje seguidas en horizontal, vertical u oblicuo gana. Si nadie lo consigue la partida termina en empate.</p>
-                <h3>Comandos para jugar</h3>
-                <p>Utilizar las flechas del teclado (izquierda y derecha), para elegir la columna en la que quieres que caiga la ficha.</p>
-                <!-- flechas izq y der -->
-                <p>Una vez elegida la columna, soltar la ficha presionando el enter.</p>
-                <!-- enter -->
+            <div class="breadcrums">
+                <a href="home.html">Home ></a>
+                <p>4 en linea</p>
             </div>
-
-            <!-- seccion comentarios -->
-            <div>
-                <div>
-                    <h3>Comentarios</h3>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="none" d="M8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0ZM20.5 12.5A4.5 4.5 0 1 1 16 8a4.5 4.5 0 0 1 4.5 4.5Z"/><path fill="currentColor" d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24ZM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8ZM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0Z"/></svg>
-                        <textarea name="comment" id="" cols="80" rows="5" placeholder="Añade un comentario "></textarea>
-                        <!-- botton enviar -->
+            <!-- espacio de juego -->
+            <div class="container-juego">
+                <div class="juego">
+                    <img src="images/4 EN LINEA/juego.jpeg" alt="Juego">
+                </div>
+                <div class="juego-pantalla-intermedia"></div>
+                <button>Jugar</button>
+                <div class="multimedia-juego">
+                    <div class="images-juego">
+                        <img src="images/4 EN LINEA/burro-sheck~3.png" alt="Burro" class="img-juego">
+                        <img src="images/4 EN LINEA/gato~3.jpeg" alt="Gato" class="img-juego">
+                        <img src="images/4 EN LINEA/juego-principal.jpg" alt="Juego 4 en linea">
+                    </div>
+                    <div class="juego-video">
+                        <img src="images/4 EN LINEA/burrovsgato.jpg" alt="Burro vs Gato video">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="var(--reject)" d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8s8-3.59 8-8s-3.59-8-8-8zM9.5 16.5v-9l7 4.5l-7 4.5z"/><path fill="var(--white)" d="m9.5 16.5l7-4.5l-7-4.5z"/></svg>
                     </div>
                 </div>
-                
-                <div>
-                    <h3>Comentarios anteriores</h3>
-                    <!-- cada comentario -->
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="none" d="M8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0ZM20.5 12.5A4.5 4.5 0 1 1 16 8a4.5 4.5 0 0 1 4.5 4.5Z"/><path fill="currentColor" d="M26.749 24.93A13.99 13.99 0 1 0 2 16a13.899 13.899 0 0 0 3.251 8.93l-.02.017c.07.084.15.156.222.239c.09.103.187.2.28.3c.28.304.568.596.87.87c.092.084.187.162.28.242c.32.276.649.538.99.782c.044.03.084.069.128.1v-.012a13.901 13.901 0 0 0 16 0v.012c.044-.031.083-.07.128-.1c.34-.245.67-.506.99-.782c.093-.08.188-.159.28-.242c.302-.275.59-.566.87-.87c.093-.1.189-.197.28-.3c.071-.083.152-.155.222-.24ZM16 8a4.5 4.5 0 1 1-4.5 4.5A4.5 4.5 0 0 1 16 8ZM8.007 24.93A4.996 4.996 0 0 1 13 20h6a4.996 4.996 0 0 1 4.993 4.93a11.94 11.94 0 0 1-15.986 0Z"/></svg>
+            </div>
+            <div class="contenido-publicidades">
+                <div class="contenido">
+                    <div class="instrucciones-juego">
+                        <h2>4 en linea: Burro vs Gato - Shrek</h2>
+                        <p>Las normas del cuatro en línea son muy sencillas. Se juega siempre entre 2 jugadores y sobre un tablero de 7x6 casillas. En cada turno cada jugador coloca una ficha de su personaje en una columna y esta cae hasta la primera casilla disponible. El que consigue ubicar 4 fichas del mismo personaje seguidas en horizontal, vertical u oblicuo gana. Si nadie lo consigue la partida termina en empate.</p>
+                        <h3>Comandos para jugar</h3>
+                        <hr class="card-hr">
                         <div>
-                            <h3>NombreUsuario</h3>
-                            <p>#Comentario</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path fill="currentColor" d="M240 94c0 70-103.79 126.66-108.21 129a8 8 0 0 1-7.58 0C119.79 220.66 16 164 16 94a62.07 62.07 0 0 1 62-62c20.65 0 38.73 8.88 50 23.89C139.27 40.88 157.35 32 178 32a62.07 62.07 0 0 1 62 62Z"/></svg>
-                            <span>0</span>
+                            <div class="instrucciones-juego-flechas">
+                                <p>Utilizar las flechas del teclado (izquierda y derecha), para elegir la columna en la que quieres que caiga la ficha.</p>
+                                <i class="fa-solid fa-left-long fa-2xl"></i>
+                                <i class="fa-solid fa-right-long fa-2xl"></i>
+                            </div>
+                            <div class="instrucciones-juego-flechas">
+                                <p>Una vez elegida la columna, soltar la ficha presionando el enter.</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><mask id="ipSEnterKey0"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path fill="#fff" stroke="#fff" d="M44 44V4H24v16H4v24h40Z"/><path stroke="#000" d="m21 28l-4 4l4 4"/><path stroke="#000" d="M34 23v9H17"/></g></mask><path fill="#679cea" d="M0 0h48v48H0z" mask="url(#ipSEnterKey0)"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido-comentarios">
+                        <div>
+                            <h3>Comentarios</h3>
+                            <div class="comentario">
+                                <div class="avatar">
+                                    <img src="images/AVATARS/avatar1.png" alt="Avatar usuario">
+                                </div>
+                                <textarea name="comment" id="" cols="80" rows="5" placeholder="Añade un comentario "></textarea>
+                                <a class="btn-enviar-msg">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3>Comentarios anteriores</h3>
+                            <div class="comentario">
+                                <div class="avatar">
+                                    <img src="images/AVATARS/avatar2.png" alt="Avatar">
+                                </div>
+                                <div class="comentario-cuadro">
+                                    <div class="comentario-cuadro-text">
+                                        <h3>albertogigas</h3>
+                                        <hr class="card-hr">
+                                        <p>Me encanta este juego porque es de la maravilla del mundo mundial</p>
+                                    </div>
+                                    <div class="comentario-cuadro-like">
+                                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                                        <span>23</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comentario">
+                                <div class="avatar">
+                                    <img src="images/AVATARS/avatar3.png" alt="Avatar">
+                                </div>
+                                <div class="comentario-cuadro">
+                                    <div class="comentario-cuadro-text">
+                                        <h3>gracielabytes</h3>
+                                        <hr class="card-hr">
+                                        <p>Una pregunta cuando se gana una partida en la próxima tira primero el que ganó la ocasión anterior o también es a suerte</p>
+                                    </div>
+                                    <div class="comentario-cuadro-like">
+                                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                                        <span>12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comentario">
+                                <div class="avatar">
+                                    <img src="images/AVATARS/avatar4.png" alt="Avatar">
+                                </div>
+                                <div class="comentario-cuadro">
+                                    <div class="comentario-cuadro-text">
+                                        <h3>megaelsa</h3>
+                                        <hr class="card-hr">
+                                        <p>Y si se llena el tablero y nadie forma la línea de 4?</p>
+                                    </div>
+                                    <div class="comentario-cuadro-like">
+                                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                                        <span>55</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <aside>
+                    <div>
+                        <img src="images/ANUNCIOS PUBLICITARIOS/publi coca.jpg" alt="Publicidad coca-cola">
+                        <p class="p-anuncio">anuncio</p>
+                    </div>
+                    <div>
+                        <img src="images/ANUNCIOS PUBLICITARIOS/doritos.jpg" alt="Publicidad Doritos">
+                        <p class="p-anuncio">anuncio</p>
+                    </div>
+                    <div>
+                        <img src="images/ANUNCIOS PUBLICITARIOS/McDonald.jpg" alt="Publicidad McDonald">
+                        <p class="p-anuncio">anuncio</p>
+                    </div>
+                </aside>
             </div>
         </div>
 
-        <aside>
-            <!-- publicidades -->
-        </aside>
+        
 
         <footer class="footer-content">
             <div>
