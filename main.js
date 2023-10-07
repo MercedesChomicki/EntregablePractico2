@@ -1,5 +1,39 @@
 "use strict"
 
+// CARROUSEL-CARDS HOME
+
+const gap = 5;
+
+const carrousel = document.getElementById("carrousel"),
+  content = document.getElementById("track"),
+  item = document.getElementById("card"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
+
+next.addEventListener("click", (e) => {
+  carrousel.scrollBy(widthItem + (widthItem/10) + gap, 0);
+  if (carrousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - widthItem - gap <= carrousel.scrollLeft + widthCarrousel) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carrousel.scrollBy(-(widthItem + gap), 0);
+  if (carrousel.scrollLeft - widthItem - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - widthItem - gap <= carrousel.scrollLeft + widthItem) {
+    next.style.display = "flex";
+  }
+});
+
+let widthItem = item.offsetWidth;
+let widthCarrousel = carrousel.offsetWidth;
+window.addEventListener("resize", e => (widthItem = item.offsetWidth, widthCarrousel = carrousel.offsetWidth));
+console.log(widthItem, widthCarrousel);
+
 // CARDS
 
 const cards = document.querySelectorAll('.card');
@@ -54,43 +88,10 @@ images.forEach((img)=>{
     })
 })
 
-// CARROUSEL CARDS
-
-
-// function App(){}
-
-//     window.onload = function(e){
-//         let app = new App();
-//         window.app = app; 
-//     }
-
-//     App.prototype.processingButton = function(e) {
-//         const btn = e.currentTarget.parentNode;
-//         const track = e.currentTarget.parentNode.getElementById('track');
-//         const card = track.querySelectorAll('.card');
-//         const cardWidth = card(0).offsetWidth;
-//         const trackWidth = track.offsetWidth;
-//         const listWidth = carrouselList.offsetWidth;
-//         track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0, -2) * -1);
-//         btn.dataset.button == "btn-prev" ? prevAction(leftPosition, cardWidth, track) : nextAction(leftPosition, trackWidth, listWidth, cardWidth, track)
-//     }
-
-//     let prevAction = (leftPosition, cardWidth, track) => {
-//         if(leftPosition > 0){
-//             track.style.left = `${-1 * (leftPosition - cardWidth)}px`;
-//         }
-//     }
-
-//     let nextAction = (leftPosition, trackWidth, listWidth, cardWidth, track) => {
-//         if(leftPosition < (trackWidth - listWidth)){
-//             track.style.left = `${-1 * (leftPosition + cardWidth)}px`;
-//         }
-//     }
-
 
 // Carrousel de destacados - Home
 
-/*let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlices: true,
@@ -107,7 +108,7 @@ images.forEach((img)=>{
         nextEl: ".icon-next", 
         prevEl: ".icon-prev",
     },
-})*/
+})
 
 
 
@@ -140,7 +141,7 @@ btnSubmit.forEach((btn)=>{
 })
 
 const expressions = {
-   password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/   //la cual valida contraseñas de al menos una letra, al menos un numero, al menos una letra mayúscula, al menos 8 caracteres, no permite espacios.   
+   password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$/   //la cual valida contraseñas de al menos una letra, al menos un numero, al menos una letra mayúscula, al menos 8 caracteres, no permite espacios.   
 }
 
 const fields = {
@@ -233,40 +234,5 @@ form.addEventListener('submit', (e)=>{
 })
 
 
-/*function App(){}
-
-     window.onload = function(e){
-                 let app = new App();
-       window.app = app; 
-   }
-
-     App.prototype.processingButton = function(e) {
-        const btn = e.currentTarget;
-        const carrouselCards = e.currentTarget.parentNode;
-         const track = e.currentTarget.parentNode.querySelector('#track');
-        const card = track.querySelectorAll('.card');
-
-         const cardWidth = card[0].offsetWidth;
-
-         const trackWidth = track.offsetWidth;
-         const listWidth = carrouselCards.offsetWidth;
-
-        track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0, -2) * -1);
-       btn.dataset.button == "btn-prev" ? prevAction(leftPosition, cardWidth, track) : nextAction(leftPosition, trackWidth, listWidth, cardWidth, track)
-    }
-
-     let prevAction = (leftPosition, cardWidth, track) => {
-        if(leftPosition > 0){
-            console.log("entro 2") 
-            track.style.left = `${-1 * (leftPosition - cardWidth)}px`;
-        }
-     }
-
-     let nextAction = (leftPosition, trackWidth, listWidth, cardWidth, track) => {
-       if(leftPosition < (trackWidth - listWidth)){
-             track.style.left = `${-1 * (leftPosition + cardWidth)}px`;
-         }
-     }
-*/
 
 
