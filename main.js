@@ -1,38 +1,71 @@
 "use strict"
 
-// CARROUSEL-CARDS HOME
+// CARROUSELS-CARDS HOME
+
+// carrousel 1
 
 const gap = 5;
 
-const carrousel = document.getElementById("carrousel"),
-  content = document.getElementById("track"),
+const carrousel1 = document.getElementById("carrousel-1"),
+  content1 = document.getElementById("track-1"),
   item = document.getElementById("card"),
-  next = document.getElementById("next"),
-  prev = document.getElementById("prev");
+  next1 = document.getElementById("next-1"),
+  prev1 = document.getElementById("prev-1");
 
-next.addEventListener("click", (e) => {
-  carrousel.scrollBy(widthItem + (widthItem/10) + gap, 0);
-  if (carrousel.scrollWidth !== 0) {
-    prev.style.display = "flex";
+next1.addEventListener("click", (e) => {
+  carrousel1.scrollBy(widthItem + (widthItem/10) + gap, 0);
+  if (carrousel1.scrollWidth !== 0) {
+    prev1.style.display = "flex";
   }
-  if (content.scrollWidth - widthItem - gap <= carrousel.scrollLeft + widthCarrousel) {
-    next.style.display = "none";
+  if (content1.scrollWidth - widthItem - gap <= carrousel1.scrollLeft + widthCarrousel) {
+    next1.style.display = "none";
   }
 });
-prev.addEventListener("click", e => {
-  carrousel.scrollBy(-(widthItem + gap), 0);
-  if (carrousel.scrollLeft - widthItem - gap <= 0) {
-    prev.style.display = "none";
+prev1.addEventListener("click", e => {
+  carrousel1.scrollBy(-(widthItem + gap), 0);
+  if (carrousel1.scrollLeft - widthItem - gap <= 0) {
+    prev1.style.display = "none";
   }
-  if (!content.scrollWidth - widthItem - gap <= carrousel.scrollLeft + widthItem) {
-    next.style.display = "flex";
+  if (!content1.scrollWidth - widthItem - gap <= carrousel1.scrollLeft + widthItem) {
+    next1.style.display = "flex";
   }
 });
 
 let widthItem = item.offsetWidth;
-let widthCarrousel = carrousel.offsetWidth;
+let widthCarrousel = carrousel1.offsetWidth;
 window.addEventListener("resize", e => (widthItem = item.offsetWidth, widthCarrousel = carrousel.offsetWidth));
 console.log(widthItem, widthCarrousel);
+
+// carrousel 2
+
+const carrousel2 = document.getElementById("carrousel-2"),
+  content2 = document.getElementById("track-2"),
+  next2 = document.getElementById("next-2"),
+  prev2 = document.getElementById("prev-2");
+
+next2.addEventListener("click", (e) => {
+  carrousel2.scrollBy(widthItem + (widthItem/10) + gap, 0);
+  if (carrousel2.scrollWidth !== 0) {
+    prev2.style.display = "flex";
+  }
+  if (content2.scrollWidth - widthItem - gap <= carrousel2.scrollLeft + widthCarrousel) {
+    next2.style.display = "none";
+  }
+});
+prev2.addEventListener("click", e => {
+  carrousel2.scrollBy(-(widthItem + gap), 0);
+  if (carrousel2.scrollLeft - widthItem - gap <= 0) {
+    prev2.style.display = "none";
+  }
+  if (!content2.scrollWidth - widthItem - gap <= carrousel2.scrollLeft + widthItem) {
+    next2.style.display = "flex";
+  }
+});
+
+// let widthItem = item.offsetWidth;
+// let widthCarrousel = carrousel1.offsetWidth;
+// window.addEventListener("resize", e => (widthItem = item.offsetWidth, widthCarrousel = carrousel.offsetWidth));
+// console.log(widthItem, widthCarrousel);
 
 // CARDS
 
@@ -232,7 +265,3 @@ form.addEventListener('submit', (e)=>{
 		});
     } 
 })
-
-
-
-
