@@ -1,5 +1,37 @@
 "use strict"
 
+// LOADING
+window.addEventListener('load', ()=>{
+    console.log("entre");
+})
+
+
+let percent = document.querySelector('.percent');
+let text = document.querySelector('.text');
+
+let count = 5;
+let loading = setInterval(animate, 50);
+function animate() {
+    if(count == 100){
+        clearInterval(loading);
+        text.textContent = "Completed";
+    } else{
+        count = count + 1;
+        percent.textContent = count + '%'; 
+    }
+}
+
+// NAV
+let btnMenu = document.getElementById('btn-menu');
+btnMenu.addEventListener('click', ()=>{
+    document.getElementById('dropdown-content-menu').classList.toggle("show");
+})
+
+let btnAvatar = document.getElementById('btn-avatar');
+btnAvatar.addEventListener('click', ()=>{
+    document.getElementById('dropdown-content-avatar').classList.toggle("show");
+})
+
 // CARROUSELS-CARDS HOME
 
 // carrousel 1
@@ -33,7 +65,7 @@ prev1.addEventListener("click", e => {
 
 let widthItem = item.offsetWidth;
 let widthCarrousel = carrousel1.offsetWidth;
-window.addEventListener("resize", e => (widthItem = item.offsetWidth, widthCarrousel = carrousel.offsetWidth));
+window.addEventListener("resize", e => (widthItem = item.offsetWidth, widthCarrousel = carrousel1.offsetWidth));
 console.log(widthItem, widthCarrousel);
 
 // carrousel 2
@@ -62,10 +94,6 @@ prev2.addEventListener("click", e => {
   }
 });
 
-// let widthItem = item.offsetWidth;
-// let widthCarrousel = carrousel1.offsetWidth;
-// window.addEventListener("resize", e => (widthItem = item.offsetWidth, widthCarrousel = carrousel.offsetWidth));
-// console.log(widthItem, widthCarrousel);
 
 // CARDS
 

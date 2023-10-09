@@ -58,6 +58,7 @@ h3{
 
 body{
     font-size: 16px;
+    background-color: var(--primary);
 }
 
 input{
@@ -94,7 +95,7 @@ nav{
     background-color: var(--black);
     height: 80px;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 18% 64% 18%;
     justify-items: center;
     align-items: center;
 }
@@ -107,43 +108,71 @@ nav{
 .dropdown{
     display: inline-block;
     position: relative;
-    width: 15%;
+    width: 100%;
 }
 
-.dropdown-menu{
-    /*all: unset; Elimina todas las propiedades preestablecidas del button */
+.btn-dropdown{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--black);
+    color: var(--white);
     width: 100%;
-    border: 0; 
+}
+
+.dropdown-menu i{
+    font-size: x-large;
 }
 
 .dropdown-content{
-    list-style: none;
     display: none;
+    list-style: none;
+    margin-top: 20px;
     position: absolute;
-    width: 100%;
-    overflow: auto;
+    z-index: 10000;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 5% 30% 15% 18%;
     background-color: var(--black);
 }
 
-.dropdown-content-li{
-    padding-left: 0;
+.dropdown-content-avatar{
+    margin-top: 15px;
+    padding: 5% 8% 15% 15%;
 }
 
-.dropdown-content-li a{
+.show{
+    display: block;
+}
+
+.dropdown-content li a{
+    text-decoration: none;
     display: flex;
-    justify-content:left;
+    justify-content: left;
+    align-items: center;
+    padding: 5px;
 }
 
-.dropdown-content-p{
+.dropdown-content li a:hover {
+    background-color: var(--primary-l2);
+    width: 120%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li a div{
+    width: 15px;
+    height: 15px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content li a p{
+    z-index: 60;
     color: var(--white);
     font-family: var(--h3);
-}
-
-.icono {
-    width: 24px;
-    height: 24px;
+    margin-left: 15%;
 }
 
 /* BODY LANDING PAGE */
@@ -357,10 +386,80 @@ input:focus:required:invalid{
     border: 5px solid var(--reject);
 } */
 
+/* LOADER */
+.body-loader{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 10000;
+}
+
+.ring{
+    position: absolute;
+    /* width: 220px;
+    height: 150px; */
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    animation: ring 5s linear;
+    /* animation: ring 5s forwards cubic-bezier(0,0,0,0); */
+}
+
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #e65c00;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #0456c8;
+    }
+}
+
+.ring:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+}
+
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #737373;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* BODY HOME*/
 .container{
     background-color: var(--primary);
     position: relative;
+    z-index: 1;
     height: 100%;
     padding-top: 13px;
 }
@@ -368,13 +467,15 @@ input:focus:required:invalid{
 .swiper{
     width: 100%;
     margin-top: -20px;
+
 }
 
 .swiper-slide{
+    position: relative;
+    z-index: 1;
     height: 430px;
     width: 100%;
     background-color: rgba(22, 22, 22, 0.57);
-    /* box-shadow: 0 0 20px rgb(0, 0, 0, 0.4); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -448,6 +549,8 @@ input:focus:required:invalid{
 }
 
 .carrousel{
+    display: flex;
+    align-items: center;
     width: 100%;
     overflow: auto;
     scroll-behavior: smooth;
@@ -521,10 +624,11 @@ input:focus:required:invalid{
     position: absolute;
 } 
 
-.card .card-img img{
+.card .card-img .img{
     width: 100%;
-    height: auto;
+    height: 113px;
     border-radius: 8px 8px 0px 0px;
+    object-fit: cover;
 }
 
 .card-hover{
