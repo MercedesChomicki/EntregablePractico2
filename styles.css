@@ -132,13 +132,13 @@ nav{
     position: absolute;
     z-index: 10000;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    padding: 5% 30% 15% 18%;
+    padding: 8% 30% 10% 15%;
     background-color: var(--black);
 }
 
 .dropdown-content-avatar{
     margin-top: 15px;
-    padding: 5% 8% 15% 15%;
+    padding: 8% 8% 15% 12%;
 }
 
 .show{
@@ -155,8 +155,11 @@ nav{
 
 .dropdown-content li a:hover {
     background-color: var(--primary-l2);
-    width: 120%;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content-menu li a:hover{
+    width: 120%;
 }
 
 .dropdown-content li a div{
@@ -173,6 +176,12 @@ nav{
     color: var(--white);
     font-family: var(--h3);
     margin-left: 15%;
+    padding-bottom: 8px;
+}
+
+.hr-nav{
+    width: 110%;
+    margin: 15px 0;
 }
 
 /* BODY LANDING PAGE */
