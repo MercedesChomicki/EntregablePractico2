@@ -138,8 +138,10 @@ nav{
 }
 
 .dropdown-content-avatar{
-    margin-top: 15px;
-    padding: 8% 8% 15% 12%;
+    margin-top: 14px;
+    margin-left: -205px;
+    width: 70vw;
+    padding: 10% 8% 30% 20%;
 }
 
 .show{
@@ -185,7 +187,7 @@ nav{
     margin: 15px 0;
 }
 
- .avatar{
+.avatar{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -754,6 +756,12 @@ input:focus:required:invalid{
 
     .dropdown-content{
         width: 80%;
+    }
+
+    .dropdown-content-avatar{
+        margin-top: 14px;
+        margin-left: -20px;
+        padding: 10% 8% 15% 20%;
     }
 
     .show{
