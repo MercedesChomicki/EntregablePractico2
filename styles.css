@@ -386,8 +386,12 @@ input:focus:required:invalid{
     border: 5px solid var(--reject);
 } */
 
+/* BODY HOME*/
+
 /* LOADER */
-.body-loader{
+
+.body-page-loading{
+    background-color: var(--black);
     margin: 0;
     padding: 0;
     display: flex;
@@ -410,13 +414,10 @@ input:focus:required:invalid{
 
 .ring{
     position: absolute;
-    /* width: 220px;
-    height: 150px; */
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    animation: ring 5s linear;
-    /* animation: ring 5s forwards cubic-bezier(0,0,0,0); */
+    animation: ring 5s forwards cubic-bezier(0,0,0,0);
 }
 
 @keyframes ring{
@@ -431,6 +432,10 @@ input:focus:required:invalid{
     100%{
         transform: rotate(360deg);
         box-shadow: 1px 5px 2px #0456c8;
+    }
+    150%{
+        transform: rotate(540deg);
+        box-shadow: 1px 5px 2px #b201b2;
     }
 }
 
@@ -455,7 +460,10 @@ input:focus:required:invalid{
     letter-spacing: 1px;
 }
 
-/* BODY HOME*/
+.body-page-loaded{
+    display: none;
+}
+
 .container{
     background-color: var(--primary);
     position: relative;
