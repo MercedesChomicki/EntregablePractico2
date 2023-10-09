@@ -49,7 +49,7 @@ const carrousel1 = document.getElementById("carrousel-1"),
   prev1 = document.getElementById("prev-1");
 
 next1.addEventListener("click", (e) => {
-  carrousel1.scrollBy(widthItem + (widthItem/10) + gap, 0);
+  carrousel1.scrollBy(widthItem + gap, 0);
   if (carrousel1.scrollWidth !== 0) {
     prev1.style.display = "flex";
   }
@@ -80,7 +80,7 @@ const carrousel2 = document.getElementById("carrousel-2"),
   prev2 = document.getElementById("prev-2");
 
 next2.addEventListener("click", (e) => {
-  carrousel2.scrollBy(widthItem + (widthItem/10) + gap, 0);
+  carrousel2.scrollBy(widthItem + gap, 0);
   if (carrousel2.scrollWidth !== 0) {
     prev2.style.display = "flex";
   }
@@ -156,7 +156,7 @@ images.forEach((img)=>{
 
 // Carrousel de destacados - Home
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlices: true,
@@ -169,7 +169,7 @@ let swiper = new Swiper(".mySwiper", {
         slideShadows: true,
         stretch: 200
     },
-    navigation: {                       //navigation（arrows）
+    navigation: {                       
         nextEl: ".icon-next", 
         prevEl: ".icon-prev",
     },
