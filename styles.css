@@ -405,11 +405,6 @@ nav{
     margin: 16px 0 30px 0;
 }
 
-/* INPUT -> REQUIRED
-input:focus:required:invalid{
-    border: 5px solid var(--reject);
-} */
-
 /* BODY HOME*/
 
 /* LOADER */
