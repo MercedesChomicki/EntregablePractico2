@@ -102,17 +102,12 @@ document.getElementById("registroForm").addEventListener("submit", function(even
         document.getElementById('success-msg').classList.add('success-msg-active');
         setTimeout(() => {
             redirection();
-        }, 2000);
+        }, 3000);
     } else {
         event.preventDefault();
     }
 });
 
-document.getElementById("registroLogin").addEventListener("submit", (e)=>{
-    const form = document.querySelector(".form");
-    const inputs = document.querySelectorAll(".form input");
-
-    document.getElementById("btn-submit").addEventListener('click', redirection)
-
+document.getElementById('btn-submit').addEventListener('click', ()=>{
+    redirection();
 })
-

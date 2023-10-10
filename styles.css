@@ -526,6 +526,11 @@ nav{
     position: relative;
 }
 
+.container-carrousel .category{
+    color: var(--white);
+    margin-top: 26px;
+}
+
 .carrousel{
     display: flex;
     align-items: center;
