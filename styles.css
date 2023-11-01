@@ -847,51 +847,10 @@ nav{
         color: var(--white);
     }
     
-    .container-juego{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+    #canvas{
+        margin-left: 80px;
     }
-    
-    .juego{
-        width: 85%;
-        height: 90vh;
-        background-color: var(--black);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .juego img{
-        height: 92%;
-        width: auto;
-    }
-    
-    .juego-pantalla-intermedia{
-        width: 85%;
-        height: 90vh;
-        position: absolute;
-        z-index: 100;
-        background: rgba(22, 22, 22, 0.80);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .juego-pantalla-intermedia button{
-        width: 185px;
-        height: 50px;
-        border: 1px solid var(--white);
-        box-shadow: var(--box-shadow);   
-        background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #d400d4);
-        transition: 1s transform;
-    }
-    
-    .container-juego button:hover{
-        transform: rotate(360deg) scale(1.4);
-    }
-    
+  
     .slider-juego{
         width: 85%;
         height: 30vh;
